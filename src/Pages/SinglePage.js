@@ -8,7 +8,6 @@ import RestHeader from '../Components/Default/RestHeader'
 import { getCart } from '../Redux/Cart/ApiCalls';
 import { cartFulfilled } from '../Redux/Cart/CartSlice';
 import { getRestDetails } from '../Redux/Restaurant/ApiCalls';
-import { getLoca } from '../Redux/Location/ApiCalls';
 import { status, setToken } from '../Redux/User/UserSlice';
 import { getUser } from '../Redux/User/ApiCalls';
 import Cookies from 'universal-cookie';
@@ -36,20 +35,6 @@ const SinglePage = () => {
     getRestDetails(id, dispatch);
     getCart(User._id, id, token, dispatch);
   }, [User._id, id, token, dispatch]);
-
-  const { locity } = useSelector(state => state.location);
-
-  useEffect(() => {
-    
-    navigator.geolocation.getCurrentPosition((position) => {
-      //getting latitude and longitude from the position obj
-      const { latitude, longitude } = position.coords;
-      
-      locity === "" && getLoca(latitude, longitude, dispatch);
-
-    });
-    
-  }, [locity, dispatch]);
 
   const { Cart, isStatus } = useSelector(state => state.cart);
   const { Status } = useSelector(state => state.user);

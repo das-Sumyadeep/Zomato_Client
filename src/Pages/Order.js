@@ -14,12 +14,6 @@ const Order = () => {
   const { id, type } = useParams();
   const { token, User } = useSelector(state => state.user);
 
-  useEffect(() => {
-    getCart(User._id, id, token, dispatch);
-
-  }, [User._id, id, token, dispatch]);
-
-
   const handleBack = () => {
     navigate(`/${type}/${id}/order`);
   }
@@ -39,6 +33,11 @@ const Order = () => {
     getQuantity(User._id, id, cart_id, types, token, dispatch);
   }
 
+  useEffect(() => {
+    getCart(User._id, id, token, dispatch);
+
+  }, [User._id, id, token, dispatch]);
+
   const { Cart, Price } = useSelector((state) => state.cart);
 
   const deliveryFee = Cart[0]?.length === 0 ? 0 : 45;
@@ -48,7 +47,7 @@ const Order = () => {
 
   const launchRazorpay = () => {
     let options = {
-      key: "rzp_test_nHnuF37LJsX6FW",
+      key: process.env.REACT_APP_RAZORPAY_KEY,
       amount: GrandPrice * 100,
       currency: "INR",
       name: "Zomato 2.0",
@@ -136,8 +135,8 @@ const Order = () => {
 
         </div>
 
+        <Footer/>
       </div>
-        <Footer />
     </>
   );
 };

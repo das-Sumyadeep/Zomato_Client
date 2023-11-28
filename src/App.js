@@ -1,4 +1,5 @@
 import React from 'react'
+import env from 'dotenv'
 import { Route, Routes } from 'react-router-dom';
 // carousal css 
 import "slick-carousel/slick/slick.css";
@@ -17,6 +18,7 @@ import Review from './Components/Restaurant/Review';
 import Gallery from './Components/Restaurant/Gallery';
 import Menu from './Components/Restaurant/Menu';
 import OrderNow from './Components/Restaurant/OrderNow';
+env.config();
 
 function App() {
 

@@ -8,7 +8,7 @@ const CartDiv = () => {
 
     const params = useParams();
     const dispatch = useDispatch();
-    const { Cart, Price } = useSelector((state) => state.cart);
+    const { Loading, Cart, Price } = useSelector((state) => state.cart);
     const { User, token } = useSelector((state) => state.user);
 
     const handleDeleteAll = () => {
@@ -25,7 +25,8 @@ const CartDiv = () => {
                     <div className='flex items-center gap-4'>
                         <button className='font-semibold xs:text-md xm:text-xl md:text-xl lg:text-2xl xl:text-2xl text-black rounded-lg bg-red-200 px-3 py-2 hover:bg-white hover:text-red-500' onClick={handleDeleteAll} >Clear All</button>
                         <NavLink to={`/${params.type}/${params.id}/cart`}>
-                            <button className='font-semibold xs:text-md xm:text-xl md:text-xl lg:text-2xl xl:text-2xl text-black rounded-lg bg-red-200 px-3 py-2 hover:bg-white hover:text-red-500'
+                            <button className='font-semibold xs:text-md xm:text-xl md:text-xl lg:text-2xl xl:text-2xl text-black rounded-lg bg-red-200 px-3 py-2 hover:bg-white hover:text-red-500' 
+                            disabled={Loading}
                             >Continue</button>
                         </NavLink>
                     </div>
