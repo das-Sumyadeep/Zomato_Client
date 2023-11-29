@@ -27,7 +27,7 @@ export const signupUser = async (formData, dispatch) => {
         // console.log(formData);
         const res = await Api.post('/auth/signup', formData);
         dispatch(status(res.data.message));
-        console.log(res.data.message);
+        // console.log(res.data.message);
     }
     catch (err) {
         dispatch(ReqRejected());
@@ -42,7 +42,7 @@ export const signinUser = async (formData, dispatch) => {
         dispatch(status(res.data.message));
         dispatch(ReqSingle(res.data.user));
         dispatch(setToken(res.data.token));
-        console.log(res.data.message);
+        // console.log(res.data.message);
     }
     catch (err) {
         dispatch(ReqRejected());
