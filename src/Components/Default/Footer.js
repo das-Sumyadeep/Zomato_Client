@@ -98,7 +98,7 @@ const Footer = () => {
             <div className='flex flex-col items-start gap-y-10'>
               <div className='w-36 h-8 flex items-center gap-x-3 '>
                 <img src={logo} alt='logo' className='w-full h-full' />
-                <p className='font-medium text-red-500 text-xl'>2.0</p>
+                // <p className='font-medium text-red-500 text-xl'>2.0</p>
               </div>
               <div className='flex items-center gap-x-4'>
                 <div className='border-2 border-gray-300 rounded-lg w-32 flex items-center gap-x-3 px-2 py-1 text-xl cursor-pointer'>
