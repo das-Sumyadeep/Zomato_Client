@@ -50,7 +50,7 @@ export const Home = () => {
   }, [locity, dispatch]);
   
 
-  const { Status, User } = useSelector((state) => state.user);
+  const { Status } = useSelector((state) => state.user);
 
   useEffect(() => {
     setTimeout(() => {
