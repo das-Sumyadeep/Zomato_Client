@@ -53,7 +53,7 @@ export const signinUser = async (formData, dispatch) => {
 export const updateAddress = async (userId, newAddress, token, dispatch) => {
     dispatch(ReqPending());
     try {
-        console.log(userId);
+        console.log(newAddress);
         const res = await Api.put(`/user/update/${userId}`, newAddress, {
             headers: {
                 "Authorization": `Bearer ${token}`,
