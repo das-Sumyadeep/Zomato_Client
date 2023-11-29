@@ -60,7 +60,13 @@ const MobileHead = () => {
     }
 
     const handleAddress = () => {
-        setAddress((prev) => !prev);
+        if (User._id) {
+
+            setAddress((prev) => !prev);
+        } else {
+            setLoc((prev) => !prev);
+            dispatch(status("Unauthorized User"));
+        }
     }
 
     const onChangeHandler = (e) => {
@@ -274,7 +280,13 @@ const TabHead = () => {
     }
 
     const handleAddress = () => {
-        setAddress((prev) => !prev);
+       if (User._id) {
+
+            setAddress((prev) => !prev);
+        } else {
+            setLoc((prev) => !prev);
+            dispatch(status("Unauthorized User"));
+        }
     }
 
     const onChangeHandler = (e) => {
