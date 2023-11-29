@@ -20,7 +20,8 @@ const SignUp = (props) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    alert(`Name: ${formData.fullname}, Email: ${formData.email}, Password: ${formData.password}`);
+    // alert(`Name: ${formData.fullname}, Email: ${formData.email}, Password: ${formData.password}`);
+    console.log(formData);
     signupUser(formData, dispatch);
     setFormData({ fullname: "", email: "", password: "" });
     setSignUp(prev => !prev);
