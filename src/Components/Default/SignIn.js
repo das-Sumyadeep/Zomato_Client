@@ -1,5 +1,5 @@
 import React from 'react'
-import googleImg from '../../Assets/google.png'
+// import googleImg from '../../Assets/google.png'
 import { signinUser } from '../../Redux/User/ApiCalls';
 import { useDispatch, useSelector } from 'react-redux';
 import { setFormData } from '../../Redux/User/UserSlice';
@@ -16,9 +16,9 @@ const SignIn = (props) => {
     dispatch(setFormData({ ...formData, [name]: value }));
   };
 
-  const google = () => {
-    window.location.href = 'http://localhost:3001/auth/google';
-  }
+  // const google = () => {
+  //   window.location.href = 'https://zomatoserver-ujku.onrender.com/auth/google';
+  // }
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -50,13 +50,13 @@ const SignIn = (props) => {
 
             <button type="submit" className='bg-red-400 text-lg p-2 w-full text-white focus:bg-red-500 hover:bg-red-500 font-semibold rounded-lg cursor-pointer'>Login</button>
           </form>
-          <div className='w-full border-t-2 relative bottom-0 left-0 my-2 flex items-center justify-center'>
+          {/* <div className='w-full border-t-2 relative bottom-0 left-0 my-2 flex items-center justify-center'>
             <div className='relative bottom-4 text-center text-xl rounded-full bg-Zomato-1002 w-8 text-gray-600 z-51'>or</div>
           </div>
           <div className='flex items-center justify-center gap-x-4 px-3 py-2 text-lg border-2 border-gray-300 rounded-lg relative bottom-5 cursor-pointer' onClick={google}>
             <img src={googleImg} alt='google' className='w-8 h-8' />
             <p>Continue with Google</p>
-          </div>
+          </div> */}
           {/* <div className='flex items-center justify-start gap-x-2 mb-4 text-md'>
             <p className=' text-gray-500'>New to Zomato?</p>
 

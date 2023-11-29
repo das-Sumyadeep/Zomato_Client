@@ -10,6 +10,7 @@ import { BiSolidUserCircle, BiSearch } from 'react-icons/bi';
 import SearchDiv from './SearchDiv';
 import SignIn from './SignIn';
 import SignUp from './SignUp';
+import Cookies from 'universal-cookie';
 
 const SmRestHeader = () => {
 
@@ -34,7 +35,9 @@ const SmRestHeader = () => {
     }
 
     const handleLogout = () => {
-        window.location.href = 'http://localhost:3001/auth/logout';
+        const cookies = new Cookies();
+        cookies.remove('jwt', { path: '/' });
+        window.location.href = 'https://zomatoserver-ujku.onrender.com/auth/logout';
     }
 
     return (
@@ -54,7 +57,7 @@ const SmRestHeader = () => {
                     <div className='flex items-center gap-2'>
                         {/* <button className='bg-Zomato-400 text-sm font-semibold px-3 py-2 text-white rounded-full'>Use App</button> */}
                         <span className='rounded-full w-8'>
-                            <BiSolidUserCircle className='w-full h-full text-black' onClick={() => setProfile(!profile)}/>
+                            <BiSolidUserCircle className='w-full h-full text-black' onClick={() => setProfile(!profile)} />
                         </span>
                     </div>
                 </div>
@@ -134,7 +137,9 @@ const LgRestHeader = () => {
     }
 
     const handleLogout = () => {
-        window.location.href = 'http://localhost:3001/auth/logout';
+        const cookies = new Cookies();
+        cookies.remove('jwt', { path: '/' });
+        window.location.href = 'https://zomatoserver-ujku.onrender.com/auth/logout';
     }
 
     return (

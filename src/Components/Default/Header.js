@@ -15,6 +15,7 @@ import { updateAddress } from '../../Redux/User/ApiCalls'
 import SignIn from './SignIn'
 import SignUp from './SignUp'
 import { status } from '../../Redux/User/UserSlice'
+import Cookies from 'universal-cookie';
 
 const MobileHead = () => {
 
@@ -74,7 +75,9 @@ const MobileHead = () => {
     }
 
     const handleLogout = () => {
-        window.location.href = 'http://localhost:3001/auth/logout';
+        const cookies = new Cookies();
+        cookies.remove('jwt', { path: '/' });
+        window.location.href = 'https://zomatoserver-ujku.onrender.com/auth/logout';
     }
 
     return (
@@ -130,7 +133,7 @@ const MobileHead = () => {
                 <div className='py-3 px-5 flex items-center justify-between shadow-sm h-14'>
                     <div className='flex items-center gap-2' onClick={() => setlocationBar(true)}>
                         <MdLocationPin className='text-Zomato-300 w-6 h-6' />
-                        <span className='font-semibold text-sm'>{ locity && `${locity}`}</span>
+                        <span className='font-semibold text-sm'>{locity && `${locity}`}</span>
                     </div>
                     <span className='rounded-full p-2 bg-gray-100' onClick={() => setSearchBar(true)}>
                         <BiSearch className='text-black w-6 h-6' />
@@ -286,7 +289,9 @@ const TabHead = () => {
     }
 
     const handleLogout = () => {
-        window.location.href = 'http://localhost:3001/auth/logout';
+        const cookies = new Cookies();
+        cookies.remove('jwt', { path: '/' });
+        window.location.href = 'https://zomatoserver-ujku.onrender.com/auth/logout';
     }
 
     return (
@@ -501,7 +506,9 @@ const LapHead = () => {
     }
 
     const handleLogout = () => {
-        window.location.href = 'http://localhost:3001/auth/logout';
+        const cookies = new Cookies();
+        cookies.remove('jwt', { path: '/' });
+        window.location.href = 'https://zomatoserver-ujku.onrender.com/auth/logout';
     }
 
     return (
@@ -523,7 +530,7 @@ const LapHead = () => {
                     border shadow-md'>
                             <div className='flex items-center border-r-2 gap-2'>
                                 <MdLocationPin className='text-Zomato-300 w-6 h-6' onClick={handleLocation} />
-                                <input type='search' className='w-40 lg:w-20 focus:outline-none ' placeholder={locity && `${locity}` } value={city} onChange={handleCity} />
+                                <input type='search' className='w-40 lg:w-20 focus:outline-none ' placeholder={locity && `${locity}`} value={city} onChange={handleCity} />
                                 {loc ? <GoTriangleUp className='mx-3 w-6 h-6 cursor-pointer' onClick={handleLocation} /> : <GoTriangleDown className='mx-3 w-6 h-6 cursor-pointer' onClick={handleLocation} />}
                             </div>
 

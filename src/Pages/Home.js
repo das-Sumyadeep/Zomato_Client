@@ -33,7 +33,7 @@ export const Home = () => {
 
 
   const { locity } = useSelector(state => state.location);
-  console.log(locity);
+  // console.log(locity);
   
   useEffect(() => {
     
