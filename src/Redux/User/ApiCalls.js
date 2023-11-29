@@ -25,6 +25,7 @@ export const getUser = async (token, dispatch) => {
 export const signupUser = async (formData, dispatch) => {
     dispatch(ReqPending());
     try {
+        console.log(formData);
         const res = await Api.post('/auth/signup', formData);
         dispatch(status(res.data.message));
     }
