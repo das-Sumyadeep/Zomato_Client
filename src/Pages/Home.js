@@ -62,10 +62,10 @@ export const Home = () => {
     <>
       <Header />
       {
-        (Status && User._id) && <div className='font-semibold container mx-auto rounded-lg p-2 mt-3 bg-green-500 text-white xl:text-xl lg:text-lg xm:text-md w-full text-center relative top-0 left-0 '>{Status}</div>
+        (Status && User?._id) && <div className='font-semibold container mx-auto rounded-lg p-2 mt-3 bg-green-500 text-white xl:text-xl lg:text-lg xm:text-md w-full text-center relative top-0 left-0 '>{Status}</div>
       }
       {
-        (Status && !User._id) && <div className='font-semibold container mx-auto rounded-lg p-2 mt-3 bg-red-500 text-white xl:text-xl lg:text-lg xm:text-md w-full text-center relative top-0 left-0 '>{Status}</div>
+        (Status && User?!._id) && <div className='font-semibold container mx-auto rounded-lg p-2 mt-3 bg-red-500 text-white xl:text-xl lg:text-lg xm:text-md w-full text-center relative top-0 left-0 '>{Status}</div>
       }
       <Outlet />
       <Footer />
