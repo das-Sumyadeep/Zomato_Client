@@ -16,8 +16,8 @@ const Footer = () => {
 
         <div className='bg-Zomato-1003 py-12 mt-24'>
 
-          <div className='container mx-auto bottom-0'>
-            <div className='flex items-center justify-between'>
+          <div className='container mx-auto '>
+            <div className='flex items-center justify-between bottom-0'>
               <div className='w-36 h-8 flex items-center gap-x-3 '>
                 <img src={logo} alt='logo' className='w-full h-full' />
                 {/* <p className='font-medium text-red-500 text-xl'>2.0</p> */}
@@ -74,6 +74,7 @@ const Footer = () => {
                   <li>Sitemap</li>
                 </ul>
               </div>
+              </div>
               <div>
                 <p className='font-medium tracking-wider '>SOCIAL LINKS</p>
                 <div className='flex items-center justify-start gap-x-2 mt-4 cursor-pointer'>
@@ -83,7 +84,6 @@ const Footer = () => {
                   <FaTwitter className='w-6 h-6' />
                   <FaFacebook className='w-6 h-6' />
                 </div>
-              </div>
             </div>
           </div>
         </div>
