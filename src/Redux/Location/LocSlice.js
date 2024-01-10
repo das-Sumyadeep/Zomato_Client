@@ -6,7 +6,7 @@ const LocSlice = createSlice({
     initialState: {
         isLoading: false,
         isError: false,
-        locity: ""
+        locity: "bangalore"
     },
     reducers: {
         pending: (state) => {
@@ -14,7 +14,7 @@ const LocSlice = createSlice({
         },
         fulfilled: (state, action) => {
             state.isLoading = false;
-            state.locity = action.payload;
+            // state.locity = action.payload;
         },
         reject: (state) => {
             state.isLoading = false;
