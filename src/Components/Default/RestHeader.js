@@ -158,7 +158,7 @@ const LgRestHeader = () => {
                     <div className='w-full flex items-center gap-3 ml-6 bg-white p-3 rounded-lg border shadow-md'>
                         <div className='flex items-center border-r-2 gap-2 cursor-not-allowed'>
                             <MdLocationPin className='text-Zomato-300 w-6 h-6' />
-                            <input type='search' className='w-40 lg:w-20 focus:outline-none ' placeholder={locity && `${locity}`} readOnly />
+                            <input type='search' className='w-40 lg:w-20 focus:outline-none placeholder:capitalize' placeholder={locity && `${locity}`} readOnly />
                             <GoTriangleUp className='mx-3 w-6 h-6' />
                         </div>
 
