@@ -6,7 +6,7 @@ export const getLoca = async (lat, lon, dispatch) => {
     dispatch(pending());
     try {
         const res = await Api.get(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}`);
-        dispatch(fulfilled(res.data.address.county));
+        // dispatch(fulfilled(res.data.address.county));
         // console.log(res.data.address);
     }
     catch (err) {
