@@ -12,6 +12,10 @@ export const getUser = async (token, dispatch) => {
                 // Add other headers if required
             }
         });
+
+        if(!res){
+            dispatch(status(res.data.message));
+        }    
         dispatch(ReqSingle(res.data.user));
         dispatch(status(res.data.message));
     }
