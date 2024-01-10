@@ -139,7 +139,7 @@ const MobileHead = () => {
                 <div className='py-3 px-5 flex items-center justify-between shadow-sm h-14'>
                     <div className='flex items-center gap-2' onClick={() => setlocationBar(true)}>
                         <MdLocationPin className='text-Zomato-300 w-6 h-6' />
-                        <span className='font-semibold text-sm'>{locity && `${locity}`}</span>
+                        <span className='font-semibold text-sm capitalize'>{locity && `${locity}`}</span>
                     </div>
                     <span className='rounded-full p-2 bg-gray-100' onClick={() => setSearchBar(true)}>
                         <BiSearch className='text-black w-6 h-6' />
@@ -158,7 +158,7 @@ const MobileHead = () => {
 
                     <div className='flex items-center border-r-2 gap-2 absolute top-12 w-full border-2 border-gray-300 rounded-lg'>
                         <MdLocationPin className='text-Zomato-300 w-8 h-8 mx-3' onClick={handleLocation} />
-                        <input type='search' className='w-full h-full focus:outline-none py-4' style={{ textDecoration: 'capitalize'}} placeholder={locity && `${locity}`} value={city} onChange={handleCity} />
+                        <input type='search' className='w-full h-full focus:outline-none py-4 placeholder:capitalize' placeholder={locity && `${locity}`} value={city} onChange={handleCity} />
                         {loc ? <GoTriangleUp className='mx-4 w-8 h-8 cursor-pointer' onClick={handleLocation} /> : <GoTriangleDown className='mx-4 w-8 h-8 cursor-pointer' onClick={handleLocation} />}
                     </div>
 
@@ -354,7 +354,7 @@ const TabHead = () => {
                 border shadow-md'>
                     <div className='flex items-center border-r-2 gap-2'>
                         <MdLocationPin className='text-Zomato-300 w-6 h-6' onClick={handleLocation} />
-                        <input type='search' className='w-40 focus:outline-none ' style={{ textDecoration: 'capitalize'}} placeholder={locity && `${locity}`} value={city} onChange={handleCity} />
+                        <input type='search' className='w-40 focus:outline-none placeholder:capitalize' placeholder={locity && `${locity}`} value={city} onChange={handleCity} />
                         {loc ? <GoTriangleUp className='mx-3 w-6 h-6 cursor-pointer' onClick={handleLocation} /> : <GoTriangleDown className='mx-3 w-6 h-6 cursor-pointer' onClick={handleLocation} />}
                     </div>
 
@@ -542,7 +542,7 @@ const LapHead = () => {
                     border shadow-md'>
                             <div className='flex items-center border-r-2 gap-2'>
                                 <MdLocationPin className='text-Zomato-300 w-6 h-6' onClick={handleLocation} />
-                                <input type='search' className='w-40 lg:w-20 focus:outline-none ' style={{ textDecoration: 'capitalize'}} placeholder={locity && `${locity}`} value={city} onChange={handleCity} />
+                                <input type='search' className='w-40 lg:w-20 focus:outline-none placeholder:capitalize' placeholder={locity && `${locity}`} value={city} onChange={handleCity} />
                                 {loc ? <GoTriangleUp className='mx-3 w-6 h-6 cursor-pointer' onClick={handleLocation} /> : <GoTriangleDown className='mx-3 w-6 h-6 cursor-pointer' onClick={handleLocation} />}
                             </div>
 
