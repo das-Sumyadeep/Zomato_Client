@@ -26,9 +26,9 @@ export const Home = () => {
       // Dispatch the setToken action
       dispatch(setToken(NewToken));
     }
-
-    getUser(token, dispatch);
-
+    if(token){
+      getUser(token, dispatch);
+    }
   }, [NewToken, dispatch, token]);
 
 
